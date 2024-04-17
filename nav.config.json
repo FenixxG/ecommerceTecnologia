@@ -13,6 +13,11 @@
   ],
   "private": [
     {
+      "id": "Tabla_Productos",
+      "nav_url": "index.php?page=Productos_Productos",
+      "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Tabla de Productos"
+    },
+    {
       "id":"Menu_PaymentCheckout",
       "nav_url": "index.php?page=Checkout_Checkout",
       "nav_label": "Carretilla de Compra"
