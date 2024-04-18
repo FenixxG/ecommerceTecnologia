@@ -9,6 +9,31 @@
       "id": "Menu_SignUp",
       "nav_url": "index.php?page=Sec_Register",
       "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Crear Cuenta"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Celulares_CelularProducto",
+      "nav_label": "Celulares"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Routers_RouterProducto",
+      "nav_label": "Routers"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Laptops_LaptopProducto",
+      "nav_label": "Laptops"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=PcEscritorios_PcEscritorioProducto",
+      "nav_label": "Computadoras de Escritorio"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Camaras_CamaraProducto",
+      "nav_label": "Camaras"
     }
   ],
   "private": [
@@ -24,27 +49,27 @@
     },
     {
       "id": "Menu_Categories",
-      "nav_url": "index.php?page=Celulares",
-      "nav_label": " Celulares"
+      "nav_url": "index.php?page=Celulares_CelularProducto",
+      "nav_label": "Celulares"
     },
     {
       "id": "Menu_Categories",
-      "nav_url": "index.php?page=Routers",
-      "nav_label": " Routers"
+      "nav_url": "index.php?page=Routers_RouterProducto",
+      "nav_label": "Routers"
     },
     {
       "id": "Menu_Categories",
-      "nav_url": "index.php?page=Laptops",
-      "nav_label": " Laptops"
+      "nav_url": "index.php?page=Laptops_LaptopProducto",
+      "nav_label": "Laptops"
     },
     {
       "id": "Menu_Categories",
-      "nav_url": "index.php?page=Computadoras_Escritorio",
-      "nav_label": " Computadoras de Escritorio"
+      "nav_url": "index.php?page=PcEscritorios_PcEscritorioProducto",
+      "nav_label": "Computadoras de Escritorio"
     },
     {
       "id": "Menu_Categories",
-      "nav_url": "index.php?page=Camaras",
+      "nav_url": "index.php?page=Camaras_CamaraProducto",
       "nav_label": "Camaras"
     }
   ]

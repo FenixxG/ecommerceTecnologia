@@ -130,5 +130,18 @@ class Productos extends Table {
       $params = ["productId" => $productId];
       return self::executeNonQuery($sqlstr, $params);
     }
+
+    public static function getProductsInRange(int $start, int $limit = 4) {
+      $sqlstr = "SELECT p.productId, p.productName, p.productDescription, p.productPrice, p.productImgUrl, p.productStatus, 
+                 CASE 
+                     WHEN p.productStatus = 'ACT' THEN 'Activo' 
+                     WHEN p.productStatus = 'INA' THEN 'Inactivo' 
+                     ELSE 'Sin Asignar' 
+                 END AS productStatusDsc 
+                 FROM productos p LIMIT :start, :limit";
+      $params = ["start" => $start, "limit" => $limit];
+      $registros = self::obtenerRegistros($sqlstr, $params);
+      return $registros;
+  }
 }
 ?>
