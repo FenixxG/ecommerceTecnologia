@@ -22,7 +22,7 @@
     </div>
 </section>
 
-<section class="ProductosLista">
+<section class="WWList">
     <table>
         <thead>
             <tr>
@@ -74,7 +74,7 @@
             </tr>
         </thead>
         <tbody>
-            {{foreach products}}
+            {{foreach productos}}
             <tr>
                 <td>{{productId}}</td>
                 <td>
@@ -99,7 +99,7 @@
                     {{endif ~product_DEL}}
                 </td>
             </tr>
-            {{endfor products}}
+            {{endfor productos}}
         </tbody>
     </table>
     {{pagination}}

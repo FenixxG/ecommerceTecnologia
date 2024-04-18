@@ -39,7 +39,7 @@ class Productos extends PrivateController
         $this->pageNumber - 1,
         $this->itemsPerPage
         );
-        $this->products = $tmpProducts["products"];
+        $this->products = $tmpProducts["productos"];
         $this->productsCount = $tmpProducts["total"];
         $this->pages = $this->productsCount > 0 ? ceil($this->productsCount / $this->itemsPerPage) : 1;
         if ($this->pageNumber > $this->pages) {
@@ -107,7 +107,7 @@ class Productos extends PrivateController
         $this->viewData["itemsPerPage"] = $this->itemsPerPage;
         $this->viewData["productsCount"] = $this->productsCount;
         $this->viewData["pages"] = $this->pages;
-        $this->viewData["products"] = $this->products;
+        $this->viewData["productos"] = $this->products;
         if ($this->orderBy !== "") {
         $orderByKey = "Order" . ucfirst($this->orderBy);
         $orderByKeyNoOrder = "OrderBy" . ucfirst($this->orderBy);
