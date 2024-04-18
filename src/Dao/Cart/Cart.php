@@ -6,7 +6,7 @@ class Cart extends \Dao\Table
 {
     public static function getProductosDisponibles()
     {
-        $sqlAllProductosActivos = "SELECT * from products where productStatus in ('ACT');";
+        $sqlAllProductosActivos = "SELECT * from productos where productStatus in ('ACT');";
         $productosDisponibles = self::obtenerRegistros($sqlAllProductosActivos, array());
 
         //Sacar el stock de productos con carretilla autorizada
@@ -51,7 +51,7 @@ class Cart extends \Dao\Table
 
     public static function getProductoDisponible($productId)
     {
-        $sqlAllProductosActivos = "SELECT * from products where productStatus in ('ACT') and productId=:productId;";
+        $sqlAllProductosActivos = "SELECT * from productos where productStatus in ('ACT') and productId=:productId;";
         $productosDisponibles = self::obtenerRegistros($sqlAllProductosActivos, array("productId" => $productId));
 
         //Sacar el stock de productos con carretilla autorizada
@@ -96,7 +96,7 @@ class Cart extends \Dao\Table
 
     public static function getProducto($productId)
     {
-        $sqlAllProductosActivos = "SELECT * from products where productId=:productId;";
+        $sqlAllProductosActivos = "SELECT * from productos where productId=:productId;";
         $productosDisponibles = self::obtenerRegistros($sqlAllProductosActivos, array("productId" => $productId));
         return $productosDisponibles;
     }
