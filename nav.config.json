@@ -21,6 +21,31 @@
       "id":"Menu_PaymentCheckout",
       "nav_url": "index.php?page=Checkout_Checkout",
       "nav_label": "Carretilla de Compra"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Celulares",
+      "nav_label": " Celulares"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Routers",
+      "nav_label": " Routers"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Laptops",
+      "nav_label": " Laptops"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Computadoras_Escritorio",
+      "nav_label": " Computadoras de Escritorio"
+    },
+    {
+      "id": "Menu_Categories",
+      "nav_url": "index.php?page=Camaras",
+      "nav_label": "Camaras"
     }
   ]
 }
