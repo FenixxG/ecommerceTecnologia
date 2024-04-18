@@ -100,4 +100,19 @@ class Cart extends \Dao\Table
         $productosDisponibles = self::obtenerRegistros($sqlAllProductosActivos, array("productId" => $productId));
         return $productosDisponibles;
     }
+
+    public static function obtenerNombreProducto($productId)
+    {
+        $sql = "SELECT productName FROM productos WHERE productId = :productId";
+        $result = self::obtenerUnRegistro($sql, array("productId" => $productId));
+        return isset($result['productName']) ? $result['productName'] : null;
+    }
+
+    public static function obtenerPrecioProducto($productId)
+    {
+        $sql = "SELECT productPrice FROM productos WHERE productId = :productId";
+        $result = self::obtenerUnRegistro($sql, array("productId" => $productId));
+        return isset($result['productPrice']) ? $result['productPrice'] : null;
+    }
+
 }

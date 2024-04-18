@@ -64,7 +64,7 @@
                     <img src="src al Imagen"
                         class="product-image">
                 </td>
-                <td>{{nombreProducto}}</td>
+                <td>{{productName}}</td>
                 <td class="precio">{{productPrice}}</td>
                 <td>{{cantidad}}</td>
                 <td>

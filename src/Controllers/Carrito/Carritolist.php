@@ -33,9 +33,9 @@ class Carritolist extends PublicController
         // Manejar la adición de productos al carrito
         if (isset($_POST['addToCart']) && $_POST['productId'] === $this->productId) {
            
-            $productName = obtenerNombreProducto($this->productId); // Reemplaza obtenerNombreProducto con la función real
-            $productPrice = obtenerPrecioProducto($this->productId); // Reemplaza obtenerPrecioProducto con la función real
-            
+            $productName = \Dao\Cart\Cart::obtenerNombreProducto($this->productId);
+            $productPrice = \Dao\Cart\Cart::obtenerPrecioProducto($this->productId);
+
             // Agregar el producto al carrito
             if ($this->addToCart($this->productId, $productName, $productPrice)) {
                 // Si se agregó correctamente, mostrar un mensaje de confirmación
