@@ -22,10 +22,8 @@ class Carritolist extends PublicController
         if (isset($_POST['removetoCart']) && $_POST['productId'] === $this->productId) {
             // Remover el producto del carrito
             if ($this->removeFromCart($this->productId)) {
-                // Si se removió correctamente, mostrar un mensaje de confirmación
                 echo "<script>alert('Producto removido del carrito.');</script>";
             } else {
-                // Si no se pudo remover, mostrar un mensaje de error
                 echo "<script>alert('Error: Producto no removido del carrito');</script>";
             }
         }
@@ -38,10 +36,8 @@ class Carritolist extends PublicController
 
             // Agregar el producto al carrito
             if ($this->addToCart($this->productId, $productDescription, $productPrice)) {
-                // Si se agregó correctamente, mostrar un mensaje de confirmación
                 echo "<script>alert('Producto agregado al carrito.');</script>";
             } else {
-                // Si no se pudo agregar, mostrar un mensaje de error
                 echo "<script>alert('Error: Producto no agregado al carrito');</script>";
             }
         }
@@ -51,12 +47,9 @@ class Carritolist extends PublicController
 
         // Iterar sobre $_SESSION para buscar los productos en el carrito
         foreach ($_SESSION as $key => $value) {
-            // Verificar si la clave corresponde a un producto en el carrito (las claves de los productos tienen el formato 'product_productId')
             if (strpos($key, 'product_') !== false) {
-                // Extraer el ID del producto de la clave
                 $productId = substr($key, strpos($key, '_') + 1);
 
-                // Calcular el subtotal del producto
                 $subtotalProducto = $value['productPrice'] * ($value['cantidad']);
 
                 // Agregar los detalles del producto al array de productos en el carrito
@@ -77,7 +70,6 @@ class Carritolist extends PublicController
         $impuesto = $subtotal * 0.15;
         $total = $subtotal + $impuesto;
 
-        // Renderizar la vista del carrito y pasar los productos en el carrito, subtotal, impuesto y total como datos de la vista
         \Views\Renderer::render('carrito/carritolist', [
             'productsInCart' => $productsInCart,
             'subtotal' => $subtotal,
@@ -117,8 +109,6 @@ class Carritolist extends PublicController
             // Producto eliminado con éxito
             return true;
         }
-
-        // Si el producto no estaba en el carrito, retornar false
         return false;
     }
 }

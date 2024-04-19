@@ -1,7 +1,5 @@
-<!-- Encabezado -->
 <h1>Laptops</h1>
 
-<!-- Lista de productos -->
 <div class="product-list">
     {{foreach laptopsPr}}
     <div class="product" data-productId="{{productId}}">

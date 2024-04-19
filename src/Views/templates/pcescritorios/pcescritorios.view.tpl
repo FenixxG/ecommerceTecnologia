@@ -1,7 +1,5 @@
-<!-- Encabezado -->
 <h1>Computadoras De Escritorio</h1>
 
-<!-- Lista de productos -->
 <div class="product-list">
     {{foreach pcescritorioPr}}
     <div class="product" data-productId="{{productId}}">
