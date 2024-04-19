@@ -33,11 +33,11 @@ class Carritolist extends PublicController
         // Manejar la adición de productos al carrito
         if (isset($_POST['addToCart']) && $_POST['productId'] === $this->productId) {
            
-            $productName = \Dao\Cart\Cart::obtenerNombreProducto($this->productId);
+            $productDescription = \Dao\Cart\Cart::obtenerDescripcionProducto($this->productId);
             $productPrice = \Dao\Cart\Cart::obtenerPrecioProducto($this->productId);
 
             // Agregar el producto al carrito
-            if ($this->addToCart($this->productId, $productName, $productPrice)) {
+            if ($this->addToCart($this->productId, $productDescription, $productPrice)) {
                 // Si se agregó correctamente, mostrar un mensaje de confirmación
                 echo "<script>alert('Producto agregado al carrito.');</script>";
             } else {
@@ -62,7 +62,7 @@ class Carritolist extends PublicController
                 // Agregar los detalles del producto al array de productos en el carrito
                 $productsInCart[] = [
                     'productId' => $value['productId'],
-                    'productName' => $value['productName'],
+                    'productDescription' => $value['productDescription'],
                     'productPrice' => $value['productPrice'],
                     'cantidad' => $value['cantidad'],
                     'subtotalProducto' => $subtotalProducto,
@@ -86,7 +86,7 @@ class Carritolist extends PublicController
         ]);
     }
 
-    private function addToCart($productId, $productName, $productPrice)
+    private function addToCart($productId, $productDescription, $productPrice)
     {
         // Verificar si la sesión ya está activa
         if (session_status() === PHP_SESSION_NONE) {
@@ -96,7 +96,7 @@ class Carritolist extends PublicController
         // Agregar el producto al carrito
         $_SESSION["product_$productId"] = [
             'productId' => $productId,
-            'productName' => $productName,
+            'productDescription' => $productDescription,
             'productPrice' => $productPrice
         ];
 

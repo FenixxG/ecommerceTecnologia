@@ -1,16 +1,6 @@
 {
   "public": [
     {
-      "id": "Menu_SignIn",
-      "nav_url": "index.php?page=Sec_Login",
-      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Iniciar Sesión"
-    },
-     {
-      "id": "Menu_SignUp",
-      "nav_url": "index.php?page=Sec_Register",
-      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Crear Cuenta"
-    },
-    {
       "id": "Menu_Categories",
       "nav_url": "index.php?page=Celulares_CelularProducto",
       "nav_label": "Celulares"
@@ -34,6 +24,16 @@
       "id": "Menu_Categories",
       "nav_url": "index.php?page=Camaras_CamaraProducto",
       "nav_label": "Camaras"
+    },
+    {
+      "id": "Menu_SignIn",
+      "nav_url": "index.php?page=Sec_Login",
+      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Iniciar Sesión"
+    },
+     {
+      "id": "Menu_SignUp",
+      "nav_url": "index.php?page=Sec_Register",
+      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Crear Cuenta"
     }
   ],
   "private": [

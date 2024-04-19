@@ -101,11 +101,11 @@ class Cart extends \Dao\Table
         return $productosDisponibles;
     }
 
-    public static function obtenerNombreProducto($productId)
+    public static function obtenerDescripcionProducto($productId)
     {
-        $sql = "SELECT productName FROM productos WHERE productId = :productId";
+        $sql = "SELECT productDescription FROM productos WHERE productId = :productId";
         $result = self::obtenerUnRegistro($sql, array("productId" => $productId));
-        return isset($result['productName']) ? $result['productName'] : null;
+        return isset($result['productDescription']) ? $result['productDescription'] : null;
     }
 
     public static function obtenerPrecioProducto($productId)

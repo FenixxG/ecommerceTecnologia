@@ -64,7 +64,7 @@
                     <img src="src al Imagen"
                         class="product-image">
                 </td>
-                <td>{{productName}}</td>
+                <td>{{productDescription}}</td>
                 <td class="precio">{{productPrice}}</td>
                 <td>{{cantidad}}</td>
                 <td>
@@ -81,7 +81,7 @@
 </section>
 
 <section class="fullCenter">
-    <form class="resumen" action="" id=""></form>
+    
     <section class="box">
         <h3>Resumen del pedido</h3>
     </section>
@@ -91,8 +91,10 @@
             <label id="subtotalLabel" class="col-12">Subtotal: L. {{subtotal}}</label>
             <label id="impuestoLabel" class="col-12">Impuesto (15%): L. {{impuesto}}</label>
             <label id="totalLabel" class="col-12">Total: L. {{total}}</label>
-            <button class="col-12" type="submit">Realizar compra</button>
+            <a href="index.php?page=Checkout_Checkout"><button class="col-12" type="button">Pagar con PayPal</button></a>
             <a href="index.php?page=HomeController"><button class="col-12">Elegir más productos</button></a>
         </div>
     </section>
 </section>
+
+
